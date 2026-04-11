@@ -110,7 +110,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-cyan-800 mb-4">📍 Ubicación</h2>
             <p className="text-slate-700 mb-6">Estamos a pie de playa, listos para servirte bocatas, cubatas y buen rollo todos los días.</p>
             <a
-              href="https://maps.app.goo.gl/uEB91uG9wAN6YReM8"
+              href="https://maps.app.goo.gl/Ku1qWFich1KsXTRj6"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-600 text-white font-semibold hover:bg-cyan-700 hover:scale-105 transition"
@@ -121,7 +121,7 @@ export default function Home() {
           <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg min-h-[320px] bg-white">
             <iframe
               title="Mapa Chiringuito Bar la Playa"
-              src="https://www.google.com/maps?q=Chiringuito+Bar+La+Playa,+Lugar+Laxe+59,+15949+A+Pobra+do+Carami%C3%B1al,+A+Coru%C3%B1a&z=16&output=embed"
+              src="https://www.google.com/maps/embed?pb=%211m15%211s0xd2f39a5cced52c5%3A0xe6548f7f1847c873%212sChiringito+Bar+La+Playa%2C+Av.+de+la+Coru%C3%B1a%2C+178%2C+15968+Ribeira%2C+A+Coru%C3%B1a%213m2%211d42.5635%212d-8.9916%214f13.1%2112m3%211m2%211s0xd2f39a5cced52c5%3A0xe6548f7f1847c873%212sChiringito+Bar+La+Playa%215e0%213m2%211ses%212ses%214v1%215m2%211ses%212ses"
               className="w-full h-full min-h-[320px]"
               loading="lazy"
             />
