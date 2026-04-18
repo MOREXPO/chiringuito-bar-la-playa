@@ -1,21 +1,3 @@
-import Link from "next/link";
-
-const bocatas = [
-  { nombre: "Clásico de jamón y queso", desc: "Pan crujiente, jamón serrano y queso fundido", precio: "6,50 €" },
-  { nombre: "Lomo con queso", desc: "Lomo a la plancha con queso cremoso y toque de alioli", precio: "7,20 €" },
-  { nombre: "Pollo crujiente", desc: "Pollo rebozado, lechuga fresca y salsa especial", precio: "7,80 €" },
-  { nombre: "Vegetal con atún", desc: "Lechuga, tomate, maíz, huevo y atún", precio: "6,90 €" },
-  { nombre: "Marinero especial", desc: "Calamares crujientes, mahonesa cítrica y rúcula", precio: "8,40 €" },
-];
-
-const cubatas = [
-  { nombre: "Ron con Coca-Cola", desc: "Ron añejo con cola bien fría y lima", precio: "7,00 €" },
-  { nombre: "Ginebra con tónica", desc: "Ginebra premium con tónica y twist de limón", precio: "7,50 €" },
-  { nombre: "Whisky con cola", desc: "Whisky suave con cola y hielo", precio: "7,20 €" },
-  { nombre: "Vodka con limón", desc: "Vodka helado con refresco de limón", precio: "7,00 €" },
-  { nombre: "Mojito de la casa", desc: "Hierbabuena fresca, lima natural y ron blanco", precio: "8,00 €" },
-];
-
 export default function Home() {
   return (
     <div className="bg-[#fffaf0] text-slate-900 selection:bg-cyan-200/70">
@@ -66,40 +48,15 @@ export default function Home() {
       <section id="carta" className="py-20 bg-[linear-gradient(180deg,#e6f7ff,#fffaf0)]">
         <div className="max-w-6xl mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-cyan-900 mb-10">📋 Carta</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-amber-700">🥖 Bocatas</h3>
-              <div className="space-y-4">
-                {bocatas.map((item) => (
-                  <article key={item.nombre} className="group rounded-2xl bg-white border border-amber-100 p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <h4 className="font-bold text-lg">{item.nombre}</h4>
-                        <p className="text-slate-600 text-sm mt-1">{item.desc}</p>
-                      </div>
-                      <span className="text-amber-700 font-bold whitespace-nowrap">{item.precio}</span>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-semibold mb-4 text-cyan-700">🍹 Cubatas</h3>
-              <div className="space-y-4">
-                {cubatas.map((item) => (
-                  <article key={item.nombre} className="group rounded-2xl bg-white border border-cyan-100 p-5 shadow-sm hover:shadow-xl hover:-translate-y-1 transition">
-                    <div className="flex items-start justify-between gap-4">
-                      <div>
-                        <h4 className="font-bold text-lg">{item.nombre}</h4>
-                        <p className="text-slate-600 text-sm mt-1">{item.desc}</p>
-                      </div>
-                      <span className="text-cyan-700 font-bold whitespace-nowrap">{item.precio}</span>
-                    </div>
-                  </article>
-                ))}
-              </div>
-            </div>
+          <div className="rounded-3xl border border-cyan-100 bg-white p-10 text-center shadow-xl">
+            <p className="text-5xl mb-3">🚧</p>
+            <h3 className="text-3xl font-bold text-cyan-900">Próximamente</h3>
+            <p className="mt-3 text-slate-700 text-lg">
+              La carta se publicará cuando abramos al público.
+            </p>
+            <p className="mt-2 text-slate-500">
+              Muy pronto podrás ver todos nuestros bocatas, cubatas y especialidades.
+            </p>
           </div>
         </div>
       </section>
@@ -121,7 +78,7 @@ export default function Home() {
           <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-lg min-h-[320px] bg-white">
             <iframe
               title="Mapa Chiringuito Bar la Playa"
-              src="https://www.google.com/maps/embed?pb=%211m15%211s0xd2f39a5cced52c5%3A0xe6548f7f1847c873%212sChiringito+Bar+La+Playa%2C+Av.+de+la+Coru%C3%B1a%2C+178%2C+15968+Ribeira%2C+A+Coru%C3%B1a%213m2%211d42.5635%212d-8.9916%214f13.1%2112m3%211m2%211s0xd2f39a5cced52c5%3A0xe6548f7f1847c873%212sChiringito+Bar+La+Playa%215e0%213m2%211ses%212ses%214v1%215m2%211ses%212ses"
+              src="https://maps.google.com/maps?output=embed&q=Av.+de+la+Coru%C3%B1a,+178,+15968+Ribeira,+A+Coru%C3%B1a&ll=42.5635,-8.9916&z=16&t=m"
               className="w-full h-full min-h-[320px]"
               loading="lazy"
             />
@@ -151,6 +108,7 @@ export default function Home() {
           <div>
             <h3 className="font-bold text-xl">Chiringuito Bar la Playa</h3>
             <p className="text-cyan-100/80 mt-2">Tu parada favorita frente al mar.</p>
+            <p className="text-cyan-100/90 mt-3">📞 Teléfono: <a href="tel:+34649315961" className="hover:text-white font-semibold">649 315 961</a></p>
           </div>
           <div>
             <h4 className="font-semibold mb-2">Enlaces rápidos</h4>
@@ -163,6 +121,7 @@ export default function Home() {
           <div>
             <h4 className="font-semibold mb-2">Ven a visitarnos</h4>
             <p className="text-cyan-100/80">Atardeceres, buena comida y cubatas bien fríos te esperan.</p>
+            <p className="text-cyan-100/80 mt-3">Web hecha por <a href="https://morexpo.iamoex.com" target="_blank" rel="noreferrer" className="font-semibold hover:text-white">MOREXPO</a></p>
           </div>
         </div>
       </footer>
