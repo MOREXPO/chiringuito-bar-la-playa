@@ -1,3 +1,166 @@
+const menuSections = [
+  {
+    title: "🍽️ Raciones",
+    accent: "cyan",
+    items: [
+      ["Ensalada simple (tomate, lechuga y cebolla)", "7,50 €"],
+      ["Ensalada con atún", "8,50 €"],
+      ["Tortilla española", "15,00 €"],
+      ["Patatas fritas", "4,50 €"],
+      ["Criollo con patatas", "10,00 €"],
+      ["Croquetas de jamón ibérico", "13,00 €"],
+      ["Croquetas de centolla", "16,00 €"],
+      ["Croquetas de choco en tinta", "14,00 €"],
+      ["Fingers de pollo", "9,00 €"],
+      ["Jamón asado", "12,00 €"],
+      ["Pan", "2,00 €"],
+    ],
+  },
+  {
+    title: "🥖 Bocatas",
+    accent: "amber",
+    items: [
+      ["Tortilla", "7,00 €"],
+      ["Criollo", "7,00 €"],
+      ["Jamón asado", "8,00 €"],
+      ["Jamón asado con queso", "8,50 €"],
+    ],
+  },
+  {
+    title: "🥪 Sándwiches",
+    accent: "cyan",
+    items: [
+      ["Mixto", "4,00 €", "jamón y queso"],
+      ["Sándwich de Sempre Pero Mellor", "8,00 €", "jamón, queso, lomo, bacon y huevo"],
+    ],
+  },
+  {
+    title: "🍔 Hamburguesas",
+    accent: "amber",
+    items: [
+      ["Hamburguesa simple", "6,50 €", "queso"],
+      ["Hamburguesa Chiringuito Bar La Playa", "9,50 €", "queso, bacon, huevo y cebolla caramelizada"],
+    ],
+  },
+  {
+    title: "🍕 Pizzas",
+    accent: "cyan",
+    items: [
+      ["Salami", "14,50 €"],
+      ["Prosciutto", "14,50 €"],
+      ["BBQ de pollo", "15,50 €"],
+    ],
+  },
+  {
+    title: "🍰 Postres",
+    accent: "amber",
+    items: [
+      ["Cheesecake de frutos rojos", "6,00 €"],
+      ["Tres chocolates", "6,00 €"],
+    ],
+  },
+  {
+    title: "🥐 Desayunos",
+    accent: "cyan",
+    items: [
+      ["Donut de azúcar", "1,80 €"],
+      ["Donut de chocolate", "1,80 €"],
+      ["Croissant", "1,80 €"],
+      ["Napolitana de chocolate", "2,00 €"],
+      ["Tostada con mantequilla y mermelada", "2,50 €"],
+      ["Tostada con aceite, tomate y jamón serrano", "4,50 €"],
+    ],
+  },
+  {
+    title: "☕ Cafetería",
+    accent: "amber",
+    showPrices: false,
+    items: [
+      ["Café solo", "1,40 €"],
+      ["Espresso americano", "1,60 €"],
+      ["Café con leche pequeño", "1,60 €"],
+      ["Café con leche grande", "1,80 €"],
+      ["Descafeinado de máquina", "1,50 €"],
+      ["Descafeinado de sobre", "1,50 €"],
+      ["Descafeinado grande (máquina)", "1,80 €"],
+      ["Descafeinado grande (sobre)", "1,80 €"],
+      ["Colacao", "2,20 €"],
+      ["Infusiones", "1,80 €"],
+      ["Zumo natural", "3,00 €"],
+    ],
+  },
+  {
+    title: "🥤 Refrescos",
+    accent: "cyan",
+    showPrices: false,
+    items: [
+      ["Agua pequeña", "1,50 €"],
+      ["Agua grande", "2,50 €"],
+      ["Agua con gas", "2,50 €"],
+      ["Coca-Cola", "2,70 €"],
+      ["Coca-Cola Zero", "2,70 €"],
+      ["Aquarius Limón", "2,70 €"],
+      ["Aquarius Naranja", "2,70 €"],
+      ["Lipton Limón", "2,70 €"],
+      ["Lipton Maracuyá", "2,70 €"],
+      ["Kas Limón lata", "2,70 €"],
+      ["Kas Naranja lata", "2,70 €"],
+      ["Kas Limón botella", "2,80 €"],
+      ["Kas Naranja botella", "2,80 €"],
+      ["Seven Up", "2,70 €"],
+      ["Trina Manzana", "2,70 €"],
+      ["Tónica", "2,50 €"],
+      ["Mosto Blanco", "2,50 €"],
+      ["Cacaolat", "2,50 €"],
+      ["Zumo de Piña", "2,50 €"],
+      ["Zumo de Melocotón", "2,50 €"],
+    ],
+  },
+  {
+    title: "🍺 Cervezas",
+    accent: "amber",
+    showPrices: false,
+    items: [
+      ["Mahou caña", "2,50 €"],
+      ["Mahou Radler", "2,50 €"],
+      ["Mahou Maestra", "2,80 €"],
+      ["Alhambra Reserva 1925", "2,80 €"],
+      ["Mahou Tostada 0,0", "2,50 €"],
+      ["Mahou Sin Gluten", "2,80 €"],
+    ],
+  },
+  {
+    title: "🍷 Aperitivos",
+    accent: "cyan",
+    showPrices: false,
+    items: [
+      ["Martini Rojo", "3,00 €"],
+      ["Martini Blanco", "3,00 €"],
+      ["Tinto de Verano", "3,00 €"],
+    ],
+  },
+  {
+    title: "🥃 Chupitos",
+    accent: "amber",
+    showPrices: false,
+    items: [
+      ["Chupito", "2,50 €"],
+      ["Chupito con hielo", "3,00 €"],
+    ],
+  },
+  {
+    title: "🍸 Copas",
+    accent: "cyan",
+    showPrices: false,
+    items: [
+      ["Ginebra + refresco", "7,00 €"],
+      ["Ron + refresco", "7,00 €"],
+      ["Whisky + refresco", "7,00 €"],
+      ["+1 con Red Bull", "1,00 €"],
+    ],
+  },
+];
+
 export default function Home() {
   return (
     <div className="bg-[#fffaf0] text-slate-900 selection:bg-cyan-200/70">
@@ -26,7 +189,10 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-4 text-center animate-[fadeIn_1s_ease]">
           <p className="uppercase tracking-[0.35em] text-cyan-100 text-xs md:text-sm mb-4">Verano todo el año</p>
           <h1 className="text-4xl md:text-7xl font-extrabold drop-shadow-lg">Chiringuito Bar la Playa</h1>
-          <p className="mt-5 text-lg md:text-2xl text-cyan-50">Bocatas, cubatas y buen ambiente junto al mar</p>
+          <div className="mt-5 space-y-2 text-cyan-50">
+            <p className="text-lg md:text-2xl">De Queiruga a Coroso, manteniendo viva una tradición familiar.</p>
+            <p className="text-base md:text-xl">Pizzas, hamburguesas, bocatas, postres y el mejor ambiente frente al mar.</p>
+          </div>
           <div className="mt-8 flex gap-3 justify-center flex-wrap">
             <a href="#carta" className="px-6 py-3 rounded-full bg-amber-400 text-slate-900 font-semibold hover:scale-105 transition shadow-lg">🍽️ Ver carta</a>
             <a href="#ubicacion" className="px-6 py-3 rounded-full bg-cyan-500 font-semibold hover:scale-105 transition shadow-lg">📍 Cómo llegar</a>
@@ -38,25 +204,54 @@ export default function Home() {
       <section id="nosotros" className="max-w-6xl mx-auto px-4 py-20">
         <div className="rounded-3xl bg-white border border-cyan-100 shadow-xl p-8 md:p-12 hover:shadow-2xl transition">
           <h2 className="text-3xl md:text-4xl font-bold text-cyan-800 mb-4">🌴 Sobre nosotros</h2>
-          <p className="text-slate-700 leading-relaxed text-lg">
-            En <strong>Chiringuito Bar la Playa</strong> mezclamos sabor, brisa marina y buena música para que disfrutes cada momento.
-            Somos el rincón perfecto para comer algo rico, tomarte un cubata al atardecer y vivir ese ambiente relajado que solo se encuentra junto al mar.
-          </p>
+          <div className="space-y-4 text-slate-700 leading-relaxed text-lg">
+            <p>
+              <strong>Chiringuito Bar La Playa</strong> nace como homenaje a nuestros abuelos/bisabuelos, que durante años regentaron el mítico Bar La Playa de Queiruga.
+            </p>
+            <p>
+              Hoy recuperamos su nombre y su esencia para seguir compartiendo lo que mejor sabemos hacer: buena comida, momentos junto al mar y el sabor de las cosas hechas con cariño.
+            </p>
+            <p>
+              Bienvenidos a nuestra historia. Bienvenidos al chiringuito Bar La Playa.
+            </p>
+          </div>
         </div>
       </section>
 
       <section id="carta" className="py-20 bg-[linear-gradient(180deg,#e6f7ff,#fffaf0)]">
         <div className="max-w-6xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-cyan-900 mb-10">📋 Carta</h2>
-          <div className="rounded-3xl border border-cyan-100 bg-white p-10 text-center shadow-xl">
-            <p className="text-5xl mb-3">🚧</p>
-            <h3 className="text-3xl font-bold text-cyan-900">Próximamente</h3>
-            <p className="mt-3 text-slate-700 text-lg">
-              La carta se publicará cuando abramos al público.
-            </p>
-            <p className="mt-2 text-slate-500">
-              Muy pronto podrás ver todos nuestros bocatas, cubatas y especialidades.
-            </p>
+          <h2 className="text-3xl md:text-4xl font-bold text-cyan-900 mb-4">📋 Carta</h2>
+          <p className="text-slate-600 mb-8 italic">Consulte información sobre alérgenos al personal.</p>
+          <div className="grid lg:grid-cols-2 gap-8">
+            {menuSections.map((section) => (
+              <div
+                key={section.title}
+                className={`rounded-3xl border bg-white p-8 shadow-xl ${
+                  section.accent === "amber" ? "border-amber-100" : "border-cyan-100"
+                }`}
+              >
+                <h3
+                  className={`text-2xl font-bold mb-5 ${
+                    section.accent === "amber" ? "text-amber-700" : "text-cyan-700"
+                  }`}
+                >
+                  {section.title}
+                </h3>
+                <div className="space-y-3 text-slate-800">
+                  {section.items.map(([name, price, detail]) => (
+                    <div key={name} className="flex items-start justify-between gap-4 border-b border-slate-100 pb-2">
+                      <p className="font-medium leading-snug">
+                        {name}
+                        {detail ? <span className="block text-sm font-normal text-slate-500">{detail}</span> : null}
+                      </p>
+                      {section.showPrices !== false ? (
+                        <span className="font-semibold whitespace-nowrap">{price}</span>
+                      ) : null}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -108,7 +303,7 @@ export default function Home() {
           <div>
             <h3 className="font-bold text-xl">Chiringuito Bar la Playa</h3>
             <p className="text-cyan-100/80 mt-2">Tu parada favorita frente al mar.</p>
-            <p className="text-cyan-100/90 mt-3">📞 Teléfono: <a href="tel:+34649315961" className="hover:text-white font-semibold">649 315 961</a></p>
+            <p className="text-cyan-100/90 mt-3">📞 Teléfono: <a href="tel:+34634086988" className="hover:text-white font-semibold">634 086 988</a></p>
           </div>
           <div>
             <h4 className="font-semibold mb-2">Enlaces rápidos</h4>

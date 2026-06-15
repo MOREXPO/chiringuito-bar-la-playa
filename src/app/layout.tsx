@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Chiringuito Bar la Playa",
-  description: "Bocatas, cubatas y buen ambiente junto al mar",
+  description: "De Queiruga a Coroso, manteniendo viva una tradición familiar. Pizzas, hamburguesas, bocatas, postres y el mejor ambiente frente al mar.",
 };
 
 export default function RootLayout({
