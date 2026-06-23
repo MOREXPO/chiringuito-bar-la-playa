@@ -262,7 +262,7 @@ export default function Home() {
             <h2 className="text-3xl font-bold text-cyan-800 mb-4">📍 Ubicación</h2>
             <p className="text-slate-700 mb-6">Estamos a pie de playa, listos para servirte bocatas, cubatas y buen rollo todos los días.</p>
             <a
-              href="https://maps.app.goo.gl/Ku1qWFich1KsXTRj6"
+              href="https://maps.app.goo.gl/rKDeL2gdtwhgYnD26"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-cyan-600 text-white font-semibold hover:bg-cyan-700 hover:scale-105 transition"
